@@ -1,0 +1,138 @@
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom, #6699cc, #336699);
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 48px;
+	color: #FF5733;
+	text-shadow: 1px 1px 1px #333;
+	animation: scale-in 0.5s ease-out;
+}
+
+@keyframes scale-in {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fact {
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #EEE;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	animation: fade-in 0.5s ease-out forwards;
+}
+
+.fact:nth-of-type(1) {
+	animation-delay: 0.5s;
+}
+
+.fact:nth-of-type(2) {
+	animation-delay: 1s;
+}
+
+.fact:nth-of-type(3) {
+	animation-delay: 1.5s;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fact h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: #333;
+}
+
+.fact p {
+	margin-top: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #666;
+	animation: slide-up 0.5s ease-out;
+}
+
+@keyframes slide-up {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.fact:nth-of-type(1) p {
+	animation-delay: 1s;
+}
+
+.fact:nth-of-type(2) p {
+	animation-delay: 1.5s;
+}
+
+.fact:nth-of-type(3) p {
+	animation-delay: 2s;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 20px;
+	}
+	.fact {
+		padding: 20px;
+	}
+	h1 {
+		font-size: 36px;
+	}
+	.fact h2 {
+		font-size: 20px;
+	}
+	.fact p {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h1 {
+		font-size: 24px;
+		margin-top: 20px;
+	}
+	.fact h2 {
+		font-size: 16px;
+	}
+	.fact p {
+		font-size: 12px;
+	}
+}
